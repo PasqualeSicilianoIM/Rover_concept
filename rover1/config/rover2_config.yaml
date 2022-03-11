@@ -1,0 +1,52 @@
+rover2:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers ---------------------------------------
+  motordxfront:
+    type: effort_controllers/JointEffortController
+    joint: motor_right_front
+    pid: {p: 50.0, i: 0.01, d: 10.0}
+
+
+  motorsxfront:
+    type: effort_controllers/JointEffortController
+    joint: motor_left_front
+    pid: {p: 50.0, i: 0.01, d: 10.0}
+
+
+  motordxrear:
+    type: effort_controllers/JointEffortController
+    joint: motor_right_rear
+    pid: {p: 50.0, i: 0.01, d: 10.0}
+
+
+  motorsxrear:
+    type: effort_controllers/JointEffortController
+    joint: motor_left_rear
+    pid: {p: 50.0, i: 0.01, d: 10.0}
+    
+  steerdxfront:
+    type: effort_controllers/JointPositionController
+    joint: steering_right_front
+    pid: {p: 50.0, i: 0.01, d: 10.0}
+
+
+  steersxfront:
+    type: effort_controllers/JointPositionController
+    joint: steering_left_front
+    pid: {p: 50.0, i: 0.01, d: 10.0}
+
+
+  steerdxrear:
+    type: effort_controllers/JointPositionController
+    joint: steering_right_rear
+    pid: {p: 50.0, i: 0.01, d: 10.0}
+
+
+  steersxrear:
+    type: effort_controllers/JointPositionController
+    joint: steering_left_rear
+    pid: {p: 50.0, i: 0.01, d: 10.0}

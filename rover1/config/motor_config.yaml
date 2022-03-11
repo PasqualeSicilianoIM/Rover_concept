@@ -1,0 +1,17 @@
+myrover:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers ---------------------------------------
+  motordx:
+    type: effort_controllers/JointEffortController
+    joint: motor_dx
+    pid: {p: 50.0, i: 0.01, d: 10.0}
+
+
+  motorsx:
+    type: effort_controllers/JointEffortController
+    joint: motor_sx
+    pid: {p: 50.0, i: 0.01, d: 10.0}
